@@ -61,7 +61,7 @@ $student = $studentManager->getStudentById($id);
 </style>
 <body style="background-color: #04AA6D">
 
-<h3>sua thong tin sinh vien</h3>
+<h3>Sửa thông tin sinh viên</h3>
 
 <div class="container">
     <form method="post">
@@ -90,7 +90,7 @@ $student = $studentManager->getStudentById($id);
                value ="<?php echo  $student->getChemistry()?>"
         >
 
-        <input type="submit" value="Submit">
+        <input style="width: 100%;margin-top: 8px" type="submit" value="Submit">
 
     </form>
     <a href="index_student.php"><button style="width: 100%;margin-top: 5px;">back</button></a>

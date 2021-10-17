@@ -40,11 +40,15 @@
             background-color: #f2f2f2;
             padding: 20px;
         }
+        button:hover{
+            background-color: #0105fe;
+            border-radius:2px ;
+        }
     </style>
 </head>
 <body style="background-color: #04AA6D">
 
-<h3>tao thong tin sinh vien</h3>
+<h3>Tạo thông tin sinh viên</h3>
 
 <div class="container">
     <form method="post">
@@ -63,10 +67,10 @@
         <label for="chemistry">Chemistry</label>
         <input type="number" id="chemistry" name="chemistry" placeholder="Your Chemistry..">
         <br>
-        <input type="submit" value="Submit">
+        <input style="width: 100%;margin-top: 8px" type="submit" value="Submit">
 
     </form>
-    <a href="index_student.php"><button>back</button></a>
+    <a href="index_student.php"><button style="width: 100%;margin-top: 5px;">back</button></a>
     <br>
 
 
