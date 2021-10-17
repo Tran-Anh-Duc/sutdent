@@ -1,9 +1,15 @@
 <?php
 include_once "models/student.php";
 include_once "services/studentManager.php";
+
+$id = $_GET['id'];
+$studentManager = new StudentManager();
+$student = $studentManager->getStudentById($id);
+// $studentManager -> showLog($student)
 ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -45,39 +51,50 @@ include_once "services/studentManager.php";
             padding: 20px;
         }
     </style>
+    <title>sua thong tin </title>
 </head>
-<body>
-<?php
-$id = $_GET['id'];
-//$student=$student->getStudentById($id)
-$studentManager = new StudentManager();
-$studentManager->getStudentById($id);
-$studentManager->showLog($studentManager);
-?>
-<h3>Contact Form</h3>
+<style>
+    button:hover{
+        background-color: #7b01fe;
+        border-radius:2px ;
+    }
+</style>
+<body style="background-color: #04AA6D">
+
+<h3>sua thong tin sinh vien</h3>
 
 <div class="container">
     <form method="post">
         <label for="code">Code</label>
-        <input type="number" id="code" name="code" placeholder="Your code..">
+        <input type="number" id="code" name="code" placeholder="Your code.."
+               value ="<?php echo  $student->getCode()?>"
+        >
 
         <label for="firstname">Name</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Your  name..">
+        <input type="text" id="firstname" name="firstname" placeholder="Your  name.."
+               value ="<?php echo  $student->getFirstname()?>"
+        >
 
         <label for="math">Math</label>
-        <input type="number" id="math" name="math" placeholder="Your math..">
+        <input type="number" id="math" name="math" placeholder="Your math.."
+               value ="<?php echo  $student->getMath()?>"
+        >
 
         <label for="physical">Physical</label>
-        <input type="number" id="physical" name="physical" placeholder="Your physical..">
+        <input type="number" id="physical" name="physical" placeholder="Your physical.."
+               value ="<?php echo  $student->getPhysical()?>"
+        >
 
         <label for="chemistry">Chemistry</label>
-        <input type="number" id="chemistry" name="chemistry" placeholder="Your Chemistry..">
-        <br>
+        <input type="number" id="chemistry" name="chemistry" placeholder="Your Chemistry.."
+               value ="<?php echo  $student->getChemistry()?>"
+        >
+
         <input type="submit" value="Submit">
 
     </form>
-    <a href="index_student.php"><button>back</button></a>
-    <br>
+    <a href="index_student.php"><button style="width: 100%;margin-top: 5px;">back</button></a>
+
 
 
 </div>
@@ -86,9 +103,6 @@ $studentManager->showLog($studentManager);
 </html>
 
 <?php
-
-
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $student = [
         "code" => $_REQUEST["code"],
@@ -97,12 +111,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "physical" => $_REQUEST["physical"],
         "chemistry" => $_REQUEST["chemistry"]
     ];
-//    $studentManager = new StudentManager();
-//    $studentManager->editStudentById($id);
+
 }
-
-
-
 ?>
 
 

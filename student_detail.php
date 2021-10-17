@@ -37,25 +37,26 @@ if (!isset($student)){
         padding: 2px 16px;
     }
     a{
-        margin-left: 450px;
+        margin-left: 379px;
         border: 1px solid gray;
     }
 
 </style>
-<body>
+<body style="background-color: #04AA6D">
 
 
 <div class="card">
+    <a href="index_student.php"><button>&times;</button></a>
     <h2>Thông tin học viên</h2>
     <img src="pikachu.jpg" alt="Avatar" style="width:100%">
     <div class="container">
-        <h4><b><?php echo $student->getFirstname() ?></b></h4>
-        <p><?php echo $student->getCode() ?></p>
+        <h4><b>Tên sinh viên:<?php echo $student->getFirstname() ?></b></h4>
+        <p>Mã sinh viên:<?php echo $student->getCode() ?></p>
         <p>Điểm trung bình ba môn(toán ,lí , hóa)</p>
         <p><?php echo $student->getMediumScore() ?></p>
     </div>
 </div>
-<a href="index_student.php"><button>back</button></a>
+
 
 </body>
 </html>

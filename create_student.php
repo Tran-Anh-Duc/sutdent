@@ -42,9 +42,9 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color: #04AA6D">
 
-<h3>Contact Form</h3>
+<h3>tao thong tin sinh vien</h3>
 
 <div class="container">
     <form method="post">
@@ -74,7 +74,7 @@
 
 </div>
 
-</body>
+</body >
 </html>
 <?php
 include_once "models/student.php";
@@ -90,7 +90,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ];
     $studentManager = new StudentManager();
     $studentManager->storeStudents($student);
-//    header("Location:index_student.php");
 }
 
 

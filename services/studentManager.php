@@ -68,14 +68,10 @@ class StudentManager
 
     public function deleteStudentById($id)
     {
-        array_splice($this->students,$id,1);
+        array_splice($this->students, $id, 1);
         $this->save();
     }
 
-    public function editStudentById($id)
-    {
-
-    }
 
 
 }

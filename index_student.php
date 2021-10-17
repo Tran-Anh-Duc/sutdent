@@ -9,8 +9,6 @@ $studentManager= new StudentManager();
 //$studenmanager->storeStudens($studen1);
 //$studenmanager->storeStudens($studen2);
 //$studenmanager->storeStudens($studen3);
-
-
 $students=$studentManager->getAllStudent();
 
 ?>
@@ -23,9 +21,38 @@ $students=$studentManager->getAllStudent();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Danh sach hoc vien</title>
 </head>
-<body>
-<a href="create_student.php"><button>Thêm học viên</button></a>
-<table border="1px">
+<style>
+    table{
+        background-color:chartreuse ;
+        border-collapse: collapse;
+        border: 1px solid gray;
+    }
+    button{
+        background-color: white;
+        color: black;
+        border: 2px solid #4CAF50;
+    }
+    button:hover{
+        background-color: #4CAF50;
+        color: #7b01fe;
+    }
+    .one {
+        display: block;
+        margin-left: 30% ;
+        background-color: #04AA6D;
+    }
+    .one a{
+        margin-left: 180px;
+    }
+    tr,td,th{
+        width: 50px;
+        height: 30px;
+        padding: 10px;
+    }
+</style>
+<body style="background-color: #04AA6D">
+<h1 style="margin-left: 40%">Danh sách học viên</h1>
+<table style="margin-left: 25%">
 <thead>
 <tr>
     <th>STT</th>
@@ -34,8 +61,10 @@ $students=$studentManager->getAllStudent();
     <th>Math</th>
     <th>Physical</th>
     <th>Chemistry</th>
+
 </tr>
 </thead>
+
 <tbody>
 <?php foreach ($students as $key=> $student):?>
     <tr>
@@ -46,19 +75,19 @@ $students=$studentManager->getAllStudent();
         <td><?php echo  $student->getPhysical()?></td>
         <td><?php echo  $student->getChemistry()?></td>
         <td>
-            <a href="student_detail.php?id=<?php echo $key?>"><button>Detail</button></a>
+            <a href="student_detail.php?id=<?php echo $key?>"><button >Detail</button></a>
         </td>
         <td>
-            <a onclick="return confirm('bạn có muốn xóa thông tin')" href="delete_student.php?id=<?php echo $key?>"><button>Delete</button></a>
+            <a onclick="return confirm('bạn có muốn xóa thông tin')" href="delete_student.php?id=<?php echo $key?>"><button >Delete</button></a>
         </td>
         <td>
-            <a href="Edit_student.php?id=<?php echo $key?>"><button>Edit</button></a>
+            <a href="Edit_student.php?id=<?php echo $key?>"><button >Edit</button></a>
         </td>
     </tr>
 <?php endforeach; ?>
 </tbody>
 </table>
-
+<div class="one"><a href="create_student.php"><button>Thêm học viên</button></a></div>
 </body>
 </html>
 
