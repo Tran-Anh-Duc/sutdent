@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -40,11 +40,13 @@
             background-color: #f2f2f2;
             padding: 20px;
         }
-        button:hover{
+
+        button:hover {
             background-color: #0105fe;
-            border-radius:2px ;
+            border-radius: 2px;
         }
     </style>
+    <title>tao thong tin</title>
 </head>
 <body style="background-color: #04AA6D">
 
@@ -70,15 +72,15 @@
         <input style="width: 100%;margin-top: 8px" type="submit" value="Submit">
 
     </form>
-    <a href="index_student.php"><button style="width: 100%;margin-top: 5px;">back</button></a>
+    <a href="index_student.php">
+        <button style="width: 100%;margin-top: 5px;">back</button>
+    </a>
     <br>
-
-
 
 
 </div>
 
-</body >
+</body>
 </html>
 <?php
 include_once "models/student.php";

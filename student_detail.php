@@ -2,10 +2,10 @@
 include_once "models/student.php";
 include_once "services/studentManager.php";
 
-$studentManager= new StudentManager();
+$studentManager = new StudentManager();
 $id = $_GET["id"];
 $student = $studentManager->getStudentById($id);
-if (!isset($student)){
+if (!isset($student)) {
     die("không tồn tại");
 }
 ?>
@@ -20,23 +20,25 @@ if (!isset($student)){
 </head>
 <style>
     .card {
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         transition: 0.3s;
         width: 30%;
         margin-left: 450px;
     }
-    .card h2,h4,p{
+
+    .card h2, h4, p {
         text-align: center;
     }
 
     .card:hover {
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     }
 
     .container {
         padding: 2px 16px;
     }
-    a{
+
+    a {
         margin-left: 379px;
         border: 1px solid gray;
     }
@@ -46,7 +48,9 @@ if (!isset($student)){
 
 
 <div class="card">
-    <a href="index_student.php"><button>&times;</button></a>
+    <a href="index_student.php">
+        <button>&times;</button>
+    </a>
     <h2>Thông tin học viên</h2>
     <img src="pikachu.jpg" alt="Avatar" style="width:100%">
     <div class="container">

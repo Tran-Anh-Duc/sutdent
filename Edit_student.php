@@ -54,9 +54,9 @@ $student = $studentManager->getStudentById($id);
     <title>sua thong tin </title>
 </head>
 <style>
-    button:hover{
+    button:hover {
         background-color: #7b01fe;
-        border-radius:2px ;
+        border-radius: 2px;
     }
 </style>
 <body style="background-color: #04AA6D">
@@ -67,34 +67,35 @@ $student = $studentManager->getStudentById($id);
     <form method="post">
         <label for="code">Code</label>
         <input type="number" id="code" name="code" placeholder="Your code.."
-               value ="<?php echo  $student->getCode()?>"
+               value="<?php echo $student->getCode() ?>"
         >
 
         <label for="firstname">Name</label>
         <input type="text" id="firstname" name="firstname" placeholder="Your  name.."
-               value ="<?php echo  $student->getFirstname()?>"
+               value="<?php echo $student->getFirstname() ?>"
         >
 
         <label for="math">Math</label>
         <input type="number" id="math" name="math" placeholder="Your math.."
-               value ="<?php echo  $student->getMath()?>"
+               value="<?php echo $student->getMath() ?>"
         >
 
         <label for="physical">Physical</label>
         <input type="number" id="physical" name="physical" placeholder="Your physical.."
-               value ="<?php echo  $student->getPhysical()?>"
+               value="<?php echo $student->getPhysical() ?>"
         >
 
         <label for="chemistry">Chemistry</label>
         <input type="number" id="chemistry" name="chemistry" placeholder="Your Chemistry.."
-               value ="<?php echo  $student->getChemistry()?>"
+               value="<?php echo $student->getChemistry() ?>"
         >
 
         <input style="width: 100%;margin-top: 8px" type="submit" value="Submit">
 
     </form>
-    <a href="index_student.php"><button style="width: 100%;margin-top: 5px;">back</button></a>
-
+    <a href="index_student.php">
+        <button style="width: 100%;margin-top: 5px;">back</button>
+    </a>
 
 
 </div>
