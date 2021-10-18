@@ -34,6 +34,11 @@ class StudentManager
         return $this->students[$id];
     }
 
+    public function editStudent($id,$data)
+    {
+        $this->students[$id] =$data;
+        $this->save();
+    }
 
     public function save()
     {

@@ -5,7 +5,7 @@ include_once "services/studentManager.php";
 $id = $_GET['id'];
 $studentManager = new StudentManager();
 $student = $studentManager->getStudentById($id);
-// $studentManager -> showLog($student)
+
 ?>
 
 <!DOCTYPE html>
@@ -113,6 +113,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "chemistry" => $_REQUEST["chemistry"]
     ];
 
+    $studentManager->editStudent($id,$student);
+    header("Location:index_student.php");
 }
 ?>
 

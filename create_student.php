@@ -88,11 +88,11 @@ include_once "services/studentManager.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $student = [
-        "code" => $_REQUEST["code"],
+        "code" => (int)$_REQUEST["code"],
         "firstname" => $_REQUEST["firstname"],
-        "math" => $_REQUEST["math"],
-        "physical" => $_REQUEST["physical"],
-        "chemistry" => $_REQUEST["chemistry"]
+        "math" => (int)$_REQUEST["math"],
+        "physical" => (int)$_REQUEST["physical"],
+        "chemistry" =>(int) $_REQUEST["chemistry"]
     ];
     $studentManager = new StudentManager();
     $studentManager->storeStudents($student);
