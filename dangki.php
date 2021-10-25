@@ -1,14 +1,4 @@
 <?php
-$name = "trananhduc";
-$pas = 1;
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if ($name == $_POST['username'] && $pas == $_POST['password']) {
-        header("location:List_student.php");
-    } else {
-        echo "that bai";
-    }
-}
 
 ?>
 <!doctype html>
@@ -194,11 +184,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h1>login</h1>
     <form method="post">
         <input type="text" name="username" placeholder="Tên đăng nhập"><br>
-        <input type="password" name="password" placeholder="Mật khẩu"><br><br>
-        <button type="submit" name="submit" class="btn btn-primary btn-block btn-large">Đăng nhập</button>
+        <input type="password" name="password" placeholder="Mật khẩu"><br>
+        <input type="password" name="password" placeholder="Nhập lại mật khẩu"><br><br>
+        <button type="submit" name="submit" class="btn btn-primary btn-block btn-large">Đăng kí</button>
     </form>
-    <a href="dangki.php">
-        <button class="btn btn-primary btn-block btn-large">Đăng kí</button>
+    <a href="index_student.php">
+        <button class="btn btn-primary btn-block btn-large">Trang chủ</button>
     </a>
 </div>
 

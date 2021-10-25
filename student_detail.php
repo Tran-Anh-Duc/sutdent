@@ -48,7 +48,7 @@ if (!isset($student)) {
 
 
 <div class="card">
-    <a href="index_student.php">
+    <a href="List_student.php">
         <button>&times;</button>
     </a>
     <h2>Thông tin học viên</h2>

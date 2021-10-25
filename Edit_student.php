@@ -93,7 +93,7 @@ $student = $studentManager->getStudentById($id);
         <input style="width: 100%;margin-top: 8px" type="submit" value="Submit">
 
     </form>
-    <a href="index_student.php">
+    <a href="List_student.php">
         <button style="width: 100%;margin-top: 5px;">back</button>
     </a>
 
@@ -114,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ];
 
     $studentManager->editStudent($id,$student);
-    header("Location:index_student.php");
+    header("Location:List_student.php");
 }
 ?>
 
